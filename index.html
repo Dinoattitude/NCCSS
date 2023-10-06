@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>NCCSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/f785611823.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="code-content-formatter.js"></script>
+  </head>
+  <body>
+
+    <div class="code">
+      <div class="header">
+        <div class="rounded-dot"></div>
+        <div class="rounded-dot"></div>
+        <div class="rounded-dot"></div>
+        <div class="language">css</div>
+        <div class="copy"><i class="far fa-copy"></i></div>
+      </div>
+      <pre class="content" id="css">
+        .code {
+          counter-reset: line-numbering;
+          padding: 12px 20px 14px 10px;
+          border-radius: 10px;
+          width: 600px;
+          background: #212733;
+          color: #ffffff;
+          line-height: 150%;
+          font-family: 'JetBrains Mono';
+          font-size: 13px;
+          overflow: auto;
+        }
+
+        .code .line::before {
+          content: counter(line-numbering);
+          counter-increment: line-numbering;
+          padding-right: 1em;
+          padding-left: 8px;
+          width: 1.5em;
+          text-align: right;
+          opacity: 0.5;
+          color: #55606c;
+          background-color: #ffae57;
+        }
+      </pre>
+    </div>
+
+  </body>
+</html>

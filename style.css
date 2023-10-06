@@ -1,0 +1,129 @@
+:root {
+  --main-primary: #212733;
+  --main-secondary: #424853;
+  --clr-css-comment: #55606c;
+  --clr-css-string: #bae67e;
+  --clr-css-class: #ffae57;
+  --clr-css-property: #57c3d9;
+  --clr-css-value: #c9b6f3;
+  --transparency: rgba(0, 0, 0, 0);
+}
+
+.code .header {
+  padding: 12px 20px 10px 10px;
+  border-radius: 10px 10px 0px 0px;
+  width: 600px;
+  background: var(--main-primary);
+  color: white;
+  line-height: 150%;
+  font-family: 'JetBrains Mono';
+  font-size: 13px;
+  overflow: none;
+  border-bottom: 1px solid var(--main-secondary);
+  display: flex;
+  position: relative;
+}
+
+.code .header .language {
+  position: absolute;
+  left: 50%;
+}
+
+.code .content {
+  counter-reset: line-numbering;
+  padding: 12px 20px 14px 10px;
+  border-radius: 0px 0px 10px 10px;
+  width: 600px;
+  background: var(--main-primary);
+  color: white;
+  line-height: 150%;
+  font-family: 'JetBrains Mono';
+  font-size: 13px;
+  overflow: auto;
+  margin: 0;
+  border: none;
+}
+
+.code .content .line::before {
+  content: counter(line-numbering);
+  counter-increment: line-numbering;
+  padding-right: 1em;
+  padding-left: 8px;
+  width: 1.5em;
+  text-align: right;
+  opacity: 0.5;
+  color: white;
+}
+
+.code .header .copy {
+  border: 1px solid var(--main-secondary);
+  position: absolute;
+  width: 50px;
+  height: 15px;
+  right: 10%;
+  padding: 5px 10px 10px 10px;
+  text-align: center;
+  justify-content: center;
+}
+
+.code .header .copy:hover {
+  background-color: var(--main-secondary);
+}
+
+.code .header .copy i {
+  font-size: 20px;
+  color: var(--clr-css-comment);
+}
+
+.content .comment {
+  color: var(--clr-css-comment);
+  font-style: italic;
+}
+
+.content .string {
+  color: var(--clr-css-string);
+}
+
+/* CSS language */
+
+.css-class {
+  color: var(--clr-css-class);
+}
+
+.css-property {
+  color: var(--clr-css-property);
+}
+
+.css-value {
+  color: var(--clr-css-value);
+}
+
+/* Others */
+
+.rounded-dot {
+  background-color: var(--main-secondary);
+  border-radius: 25px;
+  width: 13px;
+  height: 13px;
+  margin: 4px;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 1px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--main-primary);
+  border-radius: 25px;
+  margin-left: 40px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-secondary);
+  border-radius: 25px;
+  background-clip: padding-box;
+  border: 4px solid var(--transparency);
+}
