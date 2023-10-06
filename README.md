@@ -9,6 +9,6 @@
   </p>
 
   <a href="https://github.com/Dinoattitude/NCCSS">
-    <img src="readme-img/NCCSS.png" alt="exemple">
+    <img src="readme-img/NCCSS.PNG" alt="exemple">
   </a>
 </div>
