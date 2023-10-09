@@ -1,22 +1,24 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 
   const codeElements = document.querySelectorAll(".content");
+  console.log(codeElements);
 
-  for (var codeElement of codeElements) {
-    const language = codeElement.id;
-    router(language, codeElements);
+  for (var i = 0; i < codeElements.length; i++) {
+    const language = codeElements[i].id;
+    router(language, codeElements, i);
   }
+
+  setLinesNumber(codeElements);
 
 });
 
-function router(language, codeElements) {
+function router(language, codeElements, index) {
   switch (language) {
     case 'css':
-      formatCSS(codeElements[0]);
-      setLinesNumber(codeElements);
+      formatCSS(codeElements[index]);
       break;
     default:
-      setLinesNumber(codeElements);
+      break;
   }
 }
 
